@@ -14,6 +14,21 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     <script src="./theme-init.js"></script>
     <script type="module" src="/src/main.ts"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chris Thomas Saji",
+        "jobTitle": "AI / Software Engineer",
+        "worksFor": { "@type": "Organization", "name": "Mastermine Technologies" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Kochi", "addressRegion": "Kerala", "addressCountry": "IN" },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Rajagiri School of Engineering and Technology" },
+          { "@type": "CollegeOrUniversity", "name": "Jain University" }
+        ],
+        "sameAs": ["https://www.linkedin.com/in/chris-thomas-saji", "https://github.com/chrissaji"]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#work">Skip to work</a>
@@ -30,6 +45,7 @@
       </nav>
       <div class="site-header__tools">
         <a class="icon-link" href="https://www.linkedin.com/in/chris-thomas-saji" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg></a>
+        <a class="icon-link" href="https://github.com/chrissaji" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg></a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" hidden></button>
       </div>
     </header>
@@ -39,11 +55,12 @@
         <div class="hero__inner">
           <p class="hero__eyebrow">AI / Software Engineer</p>
           <h1 id="hero-name" class="hero__name">Chris Thomas Saji</h1>
-          <p class="hero__lede">I build computer vision that runs in production, backend services that scale, and products on large language models.</p>
+          <p class="hero__lede">I build face recognition and photo culling at Mastermine, and an AI tutor for JEE and NEET on the side.</p>
           <div class="hero__actions">
             <a class="button button--primary" href="mailto:chris.saji001@gmail.com">Email me</a>
             <a class="button" href="./Chris_Thomas_Saji_Resume.pdf" download>Download resume</a>
           </div>
+          <p class="hero__status">Open to AI/ML and backend engineer roles · Kochi, Bengaluru or remote</p>
         </div>
       </section>
 
@@ -54,7 +71,7 @@
           <div class="project__text panel">
           <header class="project__head">
             <h3 id="flowprep-title" class="project__title">FlowPrep</h3>
-            <p class="project__meta">An AI tutor for JEE and NEET. Co-lead of a team of two.</p>
+            <p class="project__meta">A side project since 2026: an AI tutor for JEE and NEET. I co-lead a team of two.</p>
             <p class="project__summary" data-reveal="lines">Short lessons with interactive diagrams, an AI tutor inside the lessons and practice, adaptive practice, revision with a mistake notebook, and a weekly progress report.</p>
           </header>
           <dl class="stats">
@@ -87,7 +104,7 @@
           <div class="project__text">
           <header class="project__head">
             <h3 id="proofml-title" class="project__title">ProofML</h3>
-            <p class="project__meta">AI proofreading for Malayalam publishers. I led the frontend and the cloud platform.</p>
+            <p class="project__meta">A side project since 2026: AI proofreading for Malayalam publishers. I led the frontend and the cloud platform.</p>
             <p class="project__summary" data-reveal="lines">A live proofreading platform for Malayalam print publishers, with English and Hindi too. Editors upload a PDF or Word file, review the errors the AI flags, fix them in the browser and download the corrected file. A leading educational publisher uses it, along with individual writers.</p>
           </header>
           <dl class="stats">
@@ -112,7 +129,7 @@
           <div class="project__panel panel">
             <header class="project__head">
               <h3 id="clickmomentz-title" class="project__title">ClickMomentz</h3>
-              <p class="project__meta">A live AI photo platform for large events, at Mastermine Technologies.</p>
+              <p class="project__meta">My work at Mastermine Technologies since Aug 2025: a live AI photo platform for large events.</p>
               <p class="project__summary" data-reveal="lines">Guests at a large event take one selfie and find every photo they appear in. In a team of six engineers, I build the face-recognition pipeline and the engine that culls thousands of shots down to the best ones.</p>
             </header>
             <ul class="project__points">
@@ -132,8 +149,8 @@
         <article id="thesis" class="project project--thesis" data-formation="roadNetwork" data-dim="0.15" data-shift="-0.18" tabindex="-1" aria-labelledby="thesis-title">
           <dl class="stats stats--lead">
             <div class="stats__lead"><dt>Faster search</dt><dd><span data-count="338" data-suffix="×" aria-hidden="true">338×</span><span class="sr-only">338 times</span></dd></div>
-            <div><dt>Impossible pairs removed</dt><dd><span data-count="99.7" data-decimals="1" data-suffix="%" aria-hidden="true">99.7%</span><span class="sr-only">99.7%</span></dd></div>
-            <div><dt>Retraining needed</dt><dd><span aria-hidden="true">None</span><span class="sr-only">none</span></dd></div>
+            <div><dt>Candidate pairs pruned</dt><dd><span data-count="99.7" data-decimals="1" data-suffix="%" aria-hidden="true">99.7%</span><span class="sr-only">99.7%</span></dd></div>
+            <div><dt>Retraining</dt><dd><span aria-hidden="true">None</span><span class="sr-only">none</span></dd></div>
           </dl>
           <div class="project__panel panel">
             <header class="project__head">
@@ -147,6 +164,7 @@
               <li>Paper: "Physics-Aware Rule-Based Temporal Filtering for Scalable Vehicle Re-Identification", with Jithin Mathews. Accepted at IJITCS (MECS Press).</li>
             </ul>
             <ul class="tags" aria-label="Stack"><li>Python</li><li>PyTorch</li><li>TransReID</li></ul>
+            <p class="project__link"><a href="https://github.com/chrissaji/TemporalReId" rel="noopener">Source<svg class="icon-inline" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a> <span>The module, the experiments and the paper's LaTeX, on GitHub.</span></p>
           </div>
         </article>
       </section>
@@ -180,10 +198,9 @@
           <div class="panel" data-reveal="fade"><dt>Generative AI</dt><dd>LLM apps and AI agents (Claude, OpenAI and Gemini APIs, LangGraph), structured outputs, multi-model failover, evals, LLM cost tracking</dd></div>
           <div class="panel" data-reveal="fade"><dt>Claude Code</dt><dd>Agentic development with subagents, custom skills, hooks, MCP servers and parallel sessions in git worktrees, gated by automated tests</dd></div>
           <div class="panel" data-reveal="fade"><dt>AI and ML</dt><dd>Computer vision, NLP, deep learning, InsightFace (SCRFD, ArcFace), FAISS, CLIP, ONNX Runtime, PyTorch, TensorFlow, OpenCV</dd></div>
-          <div class="panel" data-reveal="fade"><dt>Backend</dt><dd>Spring Boot, Spring Cloud Gateway, FastAPI, Celery, microservices (CQRS, DCI), RabbitMQ, PostgreSQL, Redis, REST, JWT, OAuth2</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Backend</dt><dd>Spring Boot, Spring Cloud Gateway, Maven, FastAPI, Celery, microservices (CQRS, DCI), RabbitMQ, PostgreSQL, Redis, REST, JWT, OAuth2</dd></div>
           <div class="panel" data-reveal="fade"><dt>Frontend and desktop</dt><dd>Next.js, React, Electron, Redux, Vite</dd></div>
           <div class="panel" data-reveal="fade"><dt>Cloud and DevOps</dt><dd>Docker, GitHub Actions, Terraform (GCP), Cloudflare Tunnel, Sentry</dd></div>
-          <div class="panel" data-reveal="fade"><dt>Tools</dt><dd>Git, GitHub, Maven, VS Code, Jupyter, Google Colab</dd></div>
         </dl>
       </section>
 
@@ -191,14 +208,14 @@
         <h2 id="education-title" class="section-title" data-reveal="lines">Education</h2>
         <ol class="timeline timeline--pair">
           <li class="panel" data-reveal="fade">
-            <p class="timeline__when">May 2026</p>
+            <p class="timeline__when">2024 to 2026</p>
             <div class="timeline__what">
               <h3>M.Tech in Artificial Intelligence and Machine Learning</h3>
               <p class="timeline__where">Rajagiri School of Engineering and Technology, Kochi · CGPA 8.41</p>
             </div>
           </li>
           <li class="panel" data-reveal="fade">
-            <p class="timeline__when">June 2023</p>
+            <p class="timeline__when">2019 to 2023</p>
             <div class="timeline__what">
               <h3>B.Tech in Computer Science and Technology (AI specialisation)</h3>
               <p class="timeline__where">Jain University, Bengaluru (NIRF rank 65) · CGPA 8.02</p>
@@ -209,12 +226,13 @@
 
       <section id="contact" class="contact" data-formation="singularity" data-dim="0" data-shift="0.25" tabindex="-1" aria-labelledby="contact-title">
         <h2 id="contact-title" class="section-title" data-reveal="lines">Contact</h2>
-        <p class="contact__lede">Email is the quickest way to reach me. I'm based in Kochi, Kerala.</p>
-        <p class="contact__address">chris.saji001@gmail.com</p>
+        <p class="contact__lede">Open to AI/ML and backend engineer roles: Kochi, Bengaluru or remote. I'm based in Kochi, Kerala, and email is the quickest way to reach me.</p>
+        <p class="contact__address">chris.saji001@gmail.com <button class="copy" type="button" data-copy="chris.saji001@gmail.com" aria-live="polite" hidden>Copy</button></p>
         <div class="contact__actions">
           <a class="button button--primary" href="mailto:chris.saji001@gmail.com">Email me</a>
           <a class="button" href="./Chris_Thomas_Saji_Resume.pdf" download>Download resume</a>
           <a class="button" href="https://www.linkedin.com/in/chris-thomas-saji" rel="noopener">LinkedIn</a>
+          <a class="button" href="https://github.com/chrissaji" rel="noopener">GitHub</a>
         </div>
       </section>
     </main>

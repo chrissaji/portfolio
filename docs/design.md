@@ -86,8 +86,8 @@ layout family appearing twice, so Education is a two-up.
 
 **Header.** One line, 64 px, a fade from the page colour to transparent (no
 blur: a blur over a canvas that redraws every frame costs GPU on every frame).
-Mark, nav, LinkedIn icon, theme toggle. Below 420 px the "CTS" mark is hidden
-so the four links and two icons fit on one line.
+Mark, nav, LinkedIn and GitHub icons, theme toggle. Below 420 px the "CTS" mark
+is hidden so the four links and three icons fit on one line.
 
 **Rail.** A 2 px line on the right edge that fills as you scroll.
 
@@ -158,3 +158,25 @@ in either theme. Motion: every animation is in the table above, and each is off 
 motion. Core Web Vitals (Lighthouse mobile): LCP 1.9 s, CLS 0.019, blocking time 100 ms. All
 boxes pass. Changes since the first run: Education became a two-up; the four project layouts
 start at 1024 px; stats wrap instead of sitting in fixed columns.
+
+## Recruiter review, 2026-11-02
+
+Chris asked for a read as a talent acquisition team. What it changed:
+
+- The hero carries a fifth line, `.hero__status`: the roles and the places ("Open to AI/ML and
+  backend engineer roles · Kochi, Bengaluru or remote"), the first thing a recruiter screens on. A
+  deliberate exception to the four-things hero rule; hidden in the og capture.
+- The lede names the employer and the side project instead of a line that fits any engineer.
+- Each project's meta line says what it is: work at Mastermine since Aug 2025, or a side project
+  since 2026 (FlowPrep and ProofML).
+- Degree dates run start to end, so the months between the OpenText internship and Mastermine read
+  as the M.Tech. The start years (2024, 2019) are inferred from the course lengths.
+- Thesis stat labels in plain words ("Candidate pairs pruned", "Retraining: none"); the Tools skill
+  row dropped, Maven folded into Backend.
+- A copy button beside the address (`src/lib/copy.ts`; a mailto link opens nothing on many work
+  laptops) and JSON-LD Person data for name searches.
+- Not done, by Chris's choice: the resume stays as it is (99 chapters, about 15,000 tests), so it
+  trails the site's 100+ and 16,000+.
+- GitHub, once the thesis code was public under `chrissaji` (later on 2026-11-02): an icon in the
+  header beside LinkedIn, a button in Contact, the profile in the JSON-LD `sameAs`, and a "Source"
+  link on the thesis card in the same `.project__link` style as the other project links.

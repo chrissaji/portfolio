@@ -218,7 +218,8 @@ html[data-capture='og'] main > :not(.hero) {
 
 /* The preview image is the eyebrow and the name alone, centred in the frame. */
 html[data-capture='og'] .hero__lede,
-html[data-capture='og'] .hero__actions {
+html[data-capture='og'] .hero__actions,
+html[data-capture='og'] .hero__status {
   display: none;
 }
 

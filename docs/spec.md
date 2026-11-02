@@ -20,7 +20,7 @@ roles.
 | Code location | `C:\D Drive\GitHub\portfolio`, its own git repo, apart from FlowPrep                                                                      | same                                                                                           |
 | Hosting       | Cloudflare static assets on a Worker, as `streamforge-site` does. Address chosen later. A private preview link first. Nothing public without Chris's yes | same                                                                                           |
 | Sections      | Intro, selected work, experience, skills, education, contact, resume download                                                             | same                                                                                           |
-| Contact       | Email and LinkedIn. No phone number. No GitHub link (none given)                                                                          | same                                                                                           |
+| Contact       | Email, LinkedIn and GitHub (`github.com/chrissaji`, added 2026-11-02 once the thesis code was public under it). No phone number           | same; GitHub: the recruiter review, Chris                                                      |
 | ClickMomentz  | Chris's part, in words, no more detail than the resume. No screenshots                                                                    | same                                                                                           |
 | Images        | Screenshots of flowprep.in and proofml.streamforge.co.in. No headshot                                                                     | same                                                                                           |
 | Content       | The resume, plus a two-line intro written from its summary                                                                                | same                                                                                           |
@@ -53,7 +53,7 @@ Three directions were weighed for the 3D layer:
   - one line of at most 20 words
   - two actions: "Email me" (primary) and "Download resume"
 
-  LinkedIn sits in the header as an icon, and again in Contact.
+  LinkedIn and GitHub sit in the header as icons, and again in Contact.
 - **The cloud re-forms as you scroll**, one formation per chapter, morphing on
   the GPU:
 
@@ -212,8 +212,8 @@ portfolio/
 
 ## 7. Not in this version
 
-Blog, CMS, contact form, analytics, headshot, GitHub link, more than one page,
-custom cursor.
+Blog, CMS, contact form, analytics, headshot, more than one page, custom
+cursor.
 
 ## 8. Open points (default in brackets)
 

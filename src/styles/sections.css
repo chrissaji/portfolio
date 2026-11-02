@@ -101,6 +101,15 @@
   margin-top: var(--space-6);
 }
 
+/* What a recruiter screens on first: the roles and the places. A fifth line in the hero, on purpose. */
+.hero__status {
+  margin-top: var(--space-5);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.02em;
+}
+
 /* Phones: the text stacks at the bottom, and the scene keeps the open space above it. */
 @media (max-width: 767px) {
   .hero {
@@ -560,6 +569,39 @@
   letter-spacing: -0.03em;
   line-height: 1.1;
   overflow-wrap: anywhere;
+}
+
+/* A mailto link opens nothing on many work laptops, so the address can be copied instead. */
+.copy {
+  vertical-align: middle;
+  margin-left: var(--space-3);
+  padding: 0.5em 0.9em;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color var(--dur-2) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out);
+}
+
+.copy:hover,
+.copy:focus-visible {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.copy.is-done {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .site-footer {

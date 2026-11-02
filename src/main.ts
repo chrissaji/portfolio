@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import Lenis from 'lenis';
+import { initCopyButtons } from './lib/copy';
 import { detectDevice, pickQuality } from './lib/quality';
 import { initThemeToggle } from './lib/theme';
 import { initMotion } from './motion';
@@ -32,6 +33,7 @@ if (toggle) {
   toggle.hidden = false;
   initThemeToggle(toggle);
 }
+initCopyButtons(navigator.clipboard);
 
 let lenis: Lenis | null = null;
 if (motionOK && !capture) {
