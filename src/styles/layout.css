@@ -1,0 +1,227 @@
+/* The scene, the header, the rail, section sizes and the capture modes. */
+
+.field {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-field);
+  pointer-events: none;
+}
+
+.field canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* No WebGL, data saver or ?webgl=0: a still image of the cloud (Task 10), with a gradient until it loads. */
+html[data-motion='static'] .field {
+  background:
+    url('/field-dark.jpg') center / cover no-repeat,
+    radial-gradient(60% 50% at 70% 40%, rgb(159 176 200 / 0.16), transparent 70%),
+    var(--bg);
+}
+
+html[data-motion='static'][data-theme='light'] .field {
+  background:
+    url('/field-light.jpg') center / cover no-repeat,
+    radial-gradient(60% 50% at 70% 40%, rgb(42 50 64 / 0.12), transparent 70%),
+    var(--bg);
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-motion='static']:not([data-theme='dark']) .field {
+    background:
+      url('/field-light.jpg') center / cover no-repeat,
+      radial-gradient(60% 50% at 70% 40%, rgb(42 50 64 / 0.12), transparent 70%),
+      var(--bg);
+  }
+}
+
+html[data-motion='static'] .field canvas {
+  display: none;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  height: var(--header-h);
+  padding-inline: var(--gutter);
+  background: linear-gradient(to bottom, var(--bg) 35%, transparent);
+}
+
+.mark {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-5);
+  margin-inline-start: auto;
+}
+
+.nav a {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: color var(--dur-2) var(--ease-out);
+}
+
+.nav a:hover,
+.nav a[aria-current] {
+  color: var(--text);
+}
+
+.site-header__tools {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.icon-link,
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    color var(--dur-2) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out);
+}
+
+.icon-link:hover,
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.icon-link svg,
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle[hidden] {
+  display: none;
+}
+
+/* The toggle shows the theme a click switches to. */
+.theme-toggle .icon--sun {
+  display: none;
+}
+
+:root[data-theme='dark'] .theme-toggle .icon--sun {
+  display: block;
+}
+
+:root[data-theme='dark'] .theme-toggle .icon--moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .theme-toggle .icon--sun {
+    display: block;
+  }
+
+  :root:not([data-theme='light']) .theme-toggle .icon--moon {
+    display: none;
+  }
+}
+
+@media (max-width: 419px) {
+  .mark {
+    display: none;
+  }
+
+  .site-header {
+    gap: var(--space-3);
+  }
+
+  .nav {
+    gap: var(--space-3);
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+  }
+
+  .nav a {
+    font-size: 0.875rem;
+  }
+}
+
+.rail {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: var(--z-rail);
+  width: 2px;
+  height: 100%;
+}
+
+/* Only once the script runs: without it the rail would be a dead line. */
+html[data-motion] .rail {
+  display: block;
+}
+
+.rail__fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+main,
+.site-footer {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+/* The scrims behind big numbers reach past the edge; clip, which (unlike hidden) keeps sticky working. */
+main {
+  overflow-x: clip;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  align-content: center;
+  /* svh, the smallest viewport: a phone toolbar sliding away leaves the hero (and the page) the same size. */
+  min-height: 100svh;
+  padding: 6rem var(--gutter) var(--space-8);
+}
+
+.project {
+  min-height: 100svh;
+}
+
+/* ?capture=field: the scene alone (the static fallback images). ?capture=og: the name over the scene. */
+html[data-capture] .skip,
+html[data-capture] .rail,
+html[data-capture] .site-header,
+html[data-capture] .site-footer,
+html[data-capture='field'] main,
+html[data-capture='og'] main > :not(.hero) {
+  visibility: hidden;
+}
+
+/* The preview image is the eyebrow and the name alone, centred in the frame. */
+html[data-capture='og'] .hero__lede,
+html[data-capture='og'] .hero__actions {
+  display: none;
+}
+
+.theme-toggle .icon {
+  line-height: 0;
+}

@@ -1,0 +1,103 @@
+/* Design tokens. docs/design.md says why each value is what it is. */
+
+:root {
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Consolas, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
+  --step-1: clamp(1.125rem, 1.04rem + 0.38vw, 1.3125rem);
+  --step-2: clamp(1.375rem, 1.18rem + 0.85vw, 1.875rem);
+  --step-3: clamp(1.875rem, 1.43rem + 1.9vw, 3rem);
+  --step-4: clamp(2.75rem, 1.25rem + 6.4vw, 6.5rem);
+  --step-5: clamp(6rem, 2rem + 14vw, 15rem);
+  --stat: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  --stat-stage: clamp(2.25rem, 1.5rem + 2.4vw, 4rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --gutter: clamp(1rem, 0.46rem + 2.3vw, 3rem);
+  --container: 80rem;
+  --header-h: 64px;
+
+  /* One radius rule: controls and tags small, surfaces large. */
+  --radius-sm: 6px;
+  --radius: 12px;
+
+  --z-field: 0;
+  --z-content: 1;
+  --z-rail: 2;
+  --z-header: 10;
+  --z-skip: 100;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 120ms;
+  --dur-2: 240ms;
+  --dur-3: 700ms;
+  --dur-4: 1200ms;
+
+  /* Light: paper and ink. */
+  color-scheme: light;
+  --bg: #eceef1;
+  --surface: rgb(246 247 249 / 0.92);
+  --surface-solid: #f6f7f9;
+  --line: #cfd4db;
+  --line-strong: #aab2bd;
+  --text: #15181e;
+  --text-muted: #4d5562;
+  --accent: #a8501b;
+  --accent-hover: #8f4316;
+  --on-accent: #f6f7f9;
+  --shadow: 0 24px 60px -28px rgb(40 50 70 / 0.35);
+  --field-point: #2a3240;
+  --field-accent: #a8501b;
+  --field-blend: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #0b0d11;
+    --surface: rgb(18 21 27 / 0.9);
+    --surface-solid: #12151b;
+    --line: #262b35;
+    --line-strong: #3a414e;
+    --text: #e7e9ee;
+    --text-muted: #9aa1ad;
+    --accent: #e9965a;
+    --accent-hover: #f0a874;
+    --on-accent: #0b0d11;
+    --shadow: 0 30px 80px -30px rgb(2 3 5 / 0.8);
+    --field-point: #9fb0c8;
+    --field-accent: #e9965a;
+    --field-blend: additive;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0b0d11;
+  --surface: rgb(18 21 27 / 0.9);
+  --surface-solid: #12151b;
+  --line: #262b35;
+  --line-strong: #3a414e;
+  --text: #e7e9ee;
+  --text-muted: #9aa1ad;
+  --accent: #e9965a;
+  --accent-hover: #f0a874;
+  --on-accent: #0b0d11;
+  --shadow: 0 30px 80px -30px rgb(2 3 5 / 0.8);
+  --field-point: #9fb0c8;
+  --field-accent: #e9965a;
+  --field-blend: additive;
+}

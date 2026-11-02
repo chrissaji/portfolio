@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chris Thomas Saji · AI / Software Engineer</title>
+    <meta name="description" content="AI and software engineer in Kochi, building computer vision that runs in production, backend services that scale, and products on large language models.">
+    <meta name="color-scheme" content="dark light">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chris Thomas Saji · AI / Software Engineer">
+    <meta property="og:description" content="Computer vision in production, backend services that scale, and products on large language models.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <script src="./theme-init.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#work">Skip to work</a>
+    <div class="field" aria-hidden="true"><canvas></canvas></div>
+    <div class="rail" aria-hidden="true"><span class="rail__fill"></span></div>
+
+    <header class="site-header">
+      <a class="mark" href="#top" aria-label="Chris Thomas Saji, back to top">CTS</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="site-header__tools">
+        <a class="icon-link" href="https://www.linkedin.com/in/chris-thomas-saji" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg></a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" hidden></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero" data-formation="clusters" data-dim="0" data-shift="0.22" tabindex="-1" aria-labelledby="hero-name">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">AI / Software Engineer</p>
+          <h1 id="hero-name" class="hero__name">Chris Thomas Saji</h1>
+          <p class="hero__lede">I build computer vision that runs in production, backend services that scale, and products on large language models.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="mailto:chris.saji001@gmail.com">Email me</a>
+            <a class="button" href="./Chris_Thomas_Saji_Resume.pdf" download>Download resume</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="work" tabindex="-1" aria-labelledby="work-title">
+        <h2 id="work-title" class="section-title work__title" data-reveal="lines">Selected work</h2>
+
+        <article id="flowprep" class="project project--flowprep" data-formation="constellation" data-dim="0.15" tabindex="-1" aria-labelledby="flowprep-title">
+          <div class="project__text panel">
+          <header class="project__head">
+            <h3 id="flowprep-title" class="project__title">FlowPrep</h3>
+            <p class="project__meta">An AI tutor for JEE and NEET. Co-lead of a team of two.</p>
+            <p class="project__summary" data-reveal="lines">Short lessons with interactive diagrams, an AI tutor inside the lessons and practice, adaptive practice, revision with a mistake notebook, and a weekly progress report.</p>
+          </header>
+          <dl class="stats">
+            <div><dt>Chapters</dt><dd><span data-count="100" data-suffix="+" aria-hidden="true">100+</span><span class="sr-only">more than 100</span></dd></div>
+            <div><dt>Interactive diagrams</dt><dd><span data-count="300" data-suffix="+" aria-hidden="true">300+</span><span class="sr-only">more than 300</span></dd></div>
+            <div><dt>Automated tests</dt><dd><span data-count="16000" data-suffix="+" aria-hidden="true">16,000+</span><span class="sr-only">more than 16,000</span></dd></div>
+          </dl>
+          </div>
+          <div class="project__media">
+          <figure class="project__shot" data-tilt data-reveal="fade">
+            <img src="./img/flowprep-800.webp" srcset="./img/flowprep-800.webp 800w, ./img/flowprep-1600.webp 1600w" sizes="(min-width: 1024px) 54vw, 92vw" width="1600" height="1000" alt="The FlowPrep home page: the headline &quot;The tutor that sits with you while you work&quot; beside an example session with a physics question, rough work and the tutor chat." loading="lazy" decoding="async">
+          </figure>
+          <div class="project__body panel">
+            <ul class="project__points">
+              <li>I co-lead a team of two and own the platform, the product screens and payments: dashboard, reports, settings, onboarding with parental consent for minors, Razorpay billing, the installable web app and the CI pipelines.</li>
+              <li>Built entirely with Claude Code: parallel agent sessions in git worktrees, custom skills, hooks and subagent workflows, steered by architecture docs and project rules, and gated by more than 16,000 automated tests.</li>
+              <li>An AI gateway with Claude first and OpenAI as the fallback, a LangGraph tutor that keeps its checkpoints in Postgres, and background jobs that keep model calls off the request path.</li>
+            </ul>
+            <ul class="tags" aria-label="Stack"><li>Next.js 16</li><li>TypeScript</li><li>PostgreSQL (Supabase)</li><li>Drizzle</li><li>Inngest</li><li>LangGraph</li><li>Claude and OpenAI APIs</li></ul>
+            <p class="project__link"><a href="https://flowprep.in" rel="noopener">flowprep.in<svg class="icon-inline" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a> <span>Pre-launch, with a private beta sign-up.</span></p>
+          </div>
+          </div>
+        </article>
+
+        <article id="proofml" class="project project--proofml" data-formation="page" data-dim="0.15" tabindex="-1" aria-labelledby="proofml-title">
+          <figure class="project__shot" data-tilt data-reveal="fade">
+            <img src="./img/proofml-800.webp" srcset="./img/proofml-800.webp 800w, ./img/proofml-1600.webp 1600w" sizes="(min-width: 1024px) 80rem, 92vw" width="1600" height="1000" alt="The ProofML home page: the headline &quot;Proofread Malayalam, English &amp; Hindi&quot; above three cards, one for each language." loading="lazy" decoding="async">
+          </figure>
+          <div class="project__panel panel">
+          <div class="project__text">
+          <header class="project__head">
+            <h3 id="proofml-title" class="project__title">ProofML</h3>
+            <p class="project__meta">AI proofreading for Malayalam publishers. I led the frontend and the cloud platform.</p>
+            <p class="project__summary" data-reveal="lines">A live proofreading platform for Malayalam print publishers, with English and Hindi too. Editors upload a PDF or Word file, review the errors the AI flags, fix them in the browser and download the corrected file. A leading educational publisher uses it, along with individual writers.</p>
+          </header>
+          <dl class="stats">
+            <div><dt>Recall on the evaluation set</dt><dd><span data-count="100" data-suffix="%" aria-hidden="true">100%</span><span class="sr-only">100%</span></dd></div>
+            <div><dt>Languages</dt><dd><span data-count="3" aria-hidden="true">3</span><span class="sr-only">3</span></dd></div>
+            <div><dt>AI providers with failover</dt><dd><span data-count="3" aria-hidden="true">3</span><span class="sr-only">3</span></dd></div>
+          </dl>
+          </div>
+          <div class="project__body">
+            <ul class="project__points">
+              <li>Two-track detection: rule-based morphology and spell checking, plus an LLM scan that fails over across Gemini, OpenAI and Claude. It holds 100% recall on a curated evaluation set.</li>
+              <li>Decodes legacy non-Unicode Malayalam fonts into Unicode, then writes each correction back into the PDF in the publication's own embedded font. Every fix can be undone.</li>
+              <li>Multi-tenant SaaS with Clerk sign-in, organisation isolation, metered monthly plans and a per-call LLM cost ledger. The cloud runs on Terraform for GCP and GitHub Actions, with Docker Compose behind a Cloudflare Tunnel.</li>
+            </ul>
+            <ul class="tags" aria-label="Stack"><li>Python</li><li>FastAPI</li><li>Celery</li><li>PostgreSQL</li><li>Redis</li><li>React</li><li>PyMuPDF</li><li>Docker</li></ul>
+            <p class="project__link"><a href="https://proofml.streamforge.co.in" rel="noopener">proofml.streamforge.co.in<svg class="icon-inline" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+          </div>
+          </div>
+        </article>
+
+        <article id="clickmomentz" class="project project--clickmomentz" data-formation="photoGrid" data-dim="0.15" data-shift="-0.2" tabindex="-1" aria-labelledby="clickmomentz-title">
+          <div class="project__panel panel">
+            <header class="project__head">
+              <h3 id="clickmomentz-title" class="project__title">ClickMomentz</h3>
+              <p class="project__meta">A live AI photo platform for large events, at Mastermine Technologies.</p>
+              <p class="project__summary" data-reveal="lines">Guests at a large event take one selfie and find every photo they appear in. In a team of six engineers, I build the face-recognition pipeline and the engine that culls thousands of shots down to the best ones.</p>
+            </header>
+            <ul class="project__points">
+              <li>Face recognition with InsightFace: SCRFD detection and 512-number ArcFace embeddings on ONNX Runtime, searched by cosine similarity in FAISS. About 95% matching accuracy from a single selfie, with near-instant search.</li>
+              <li>A multi-stage culling engine that scores blur, exposure, open eyes, pose and aesthetics, uses CLIP for scene understanding, clusters faces with ArcFace and HDBSCAN, and catches bursts and duplicates. Photographers choose how many to keep and get back a ranked set, saving hours per event.</li>
+              <li>Four Spring Boot 3.5 and Java 21 microservices on a DCI and CQRS design, and 8+ RabbitMQ queues for resumable async work across parallel workers. Multi-tenant security with JWT and OAuth2, a subscription service, and S3 and GCS storage with presigned URLs. I also contribute to the Electron and React desktop app that bundles the Python AI worker for offline processing.</li>
+            </ul>
+            <ul class="tags" aria-label="Stack"><li>InsightFace</li><li>ONNX Runtime</li><li>FAISS</li><li>CLIP</li><li>HDBSCAN</li><li>Spring Boot</li><li>RabbitMQ</li><li>PostgreSQL</li><li>Electron</li></ul>
+          </div>
+          <dl class="stats stats--stage">
+            <div><dt>Matching accuracy from one selfie</dt><dd><span data-count="95" data-prefix="~" data-suffix="%" aria-hidden="true">~95%</span><span class="sr-only">about 95%</span></dd></div>
+            <div><dt>Photos per event</dt><dd><span data-count="10000" data-prefix="up to " aria-hidden="true">up to 10,000</span><span class="sr-only">up to 10,000</span></dd></div>
+            <div><dt>To index a typical event</dt><dd><span aria-hidden="true">&lt; 1 hour</span><span class="sr-only">under an hour</span></dd></div>
+          </dl>
+        </article>
+
+        <article id="thesis" class="project project--thesis" data-formation="roadNetwork" data-dim="0.15" data-shift="-0.18" tabindex="-1" aria-labelledby="thesis-title">
+          <dl class="stats stats--lead">
+            <div class="stats__lead"><dt>Faster search</dt><dd><span data-count="338" data-suffix="×" aria-hidden="true">338×</span><span class="sr-only">338 times</span></dd></div>
+            <div><dt>Impossible pairs removed</dt><dd><span data-count="99.7" data-decimals="1" data-suffix="%" aria-hidden="true">99.7%</span><span class="sr-only">99.7%</span></dd></div>
+            <div><dt>Retraining needed</dt><dd><span aria-hidden="true">None</span><span class="sr-only">none</span></dd></div>
+          </dl>
+          <div class="project__panel panel">
+            <header class="project__head">
+              <h3 id="thesis-title" class="project__title">Vehicle <span class="nowrap">re-identification</span> across cameras</h3>
+              <p class="project__meta">My M.Tech thesis, with a paper accepted at IJITCS.</p>
+              <p class="project__summary" data-reveal="lines">Finding the same vehicle across a city's cameras usually means comparing it with every candidate. I added a physics-aware Temporal Consistency Module to the TransReID transformer. It uses the camera network's layout and realistic travel times to rule out matches that could not physically happen, before any visual comparison.</p>
+            </header>
+            <ul class="project__points">
+              <li>On VeRi-776 it removes 99.7% of impossible candidate pairs (373 of 126,063 survive), so search runs 338 times faster, with no retraining.</li>
+              <li>Accuracy holds: mAP rises from 82.1% to 82.5%, and Rank-1 stays at 97.4%.</li>
+              <li>Paper: "Physics-Aware Rule-Based Temporal Filtering for Scalable Vehicle Re-Identification", with Jithin Mathews. Accepted at IJITCS (MECS Press).</li>
+            </ul>
+            <ul class="tags" aria-label="Stack"><li>Python</li><li>PyTorch</li><li>TransReID</li></ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" class="about about--experience" data-formation="clusters" data-dim="0.65" tabindex="-1" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title" data-reveal="lines">Experience</h2>
+        <ol class="timeline panel">
+          <li data-reveal="fade">
+            <p class="timeline__when">Aug 2025 to now</p>
+            <div class="timeline__what">
+              <h3>AI/Software Engineer, Mastermine Technologies</h3>
+              <p class="timeline__where">Kochi, Kerala</p>
+              <p>Face recognition, AI photo culling and the microservices behind ClickMomentz, a live AI photo platform for large events.</p>
+            </div>
+          </li>
+          <li data-reveal="fade">
+            <p class="timeline__when">Aug 2023 to Feb 2024</p>
+            <div class="timeline__what">
+              <h3>DevOps Intern, OpenText</h3>
+              <p class="timeline__where">Bengaluru</p>
+              <p>Manual and Selenium-automated testing: built and maintained test cases and automation frameworks, and worked with developers to fix issues.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="skills" class="about about--skills" data-formation="clusters" data-dim="0.65" tabindex="-1" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-title" data-reveal="lines">Skills</h2>
+        <dl class="skills">
+          <div class="panel" data-reveal="fade"><dt>Languages</dt><dd>Python, Java, C++, SQL, TypeScript</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Generative AI</dt><dd>LLM apps and AI agents (Claude, OpenAI and Gemini APIs, LangGraph), structured outputs, multi-model failover, evals, LLM cost tracking</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Claude Code</dt><dd>Agentic development with subagents, custom skills, hooks, MCP servers and parallel sessions in git worktrees, gated by automated tests</dd></div>
+          <div class="panel" data-reveal="fade"><dt>AI and ML</dt><dd>Computer vision, NLP, deep learning, InsightFace (SCRFD, ArcFace), FAISS, CLIP, ONNX Runtime, PyTorch, TensorFlow, OpenCV</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Backend</dt><dd>Spring Boot, Spring Cloud Gateway, FastAPI, Celery, microservices (CQRS, DCI), RabbitMQ, PostgreSQL, Redis, REST, JWT, OAuth2</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Frontend and desktop</dt><dd>Next.js, React, Electron, Redux, Vite</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Cloud and DevOps</dt><dd>Docker, GitHub Actions, Terraform (GCP), Cloudflare Tunnel, Sentry</dd></div>
+          <div class="panel" data-reveal="fade"><dt>Tools</dt><dd>Git, GitHub, Maven, VS Code, Jupyter, Google Colab</dd></div>
+        </dl>
+      </section>
+
+      <section id="education" class="about about--education" data-formation="clusters" data-dim="0.65" tabindex="-1" aria-labelledby="education-title">
+        <h2 id="education-title" class="section-title" data-reveal="lines">Education</h2>
+        <ol class="timeline timeline--pair">
+          <li class="panel" data-reveal="fade">
+            <p class="timeline__when">May 2026</p>
+            <div class="timeline__what">
+              <h3>M.Tech in Artificial Intelligence and Machine Learning</h3>
+              <p class="timeline__where">Rajagiri School of Engineering and Technology, Kochi · CGPA 8.41</p>
+            </div>
+          </li>
+          <li class="panel" data-reveal="fade">
+            <p class="timeline__when">June 2023</p>
+            <div class="timeline__what">
+              <h3>B.Tech in Computer Science and Technology (AI specialisation)</h3>
+              <p class="timeline__where">Jain University, Bengaluru (NIRF rank 65) · CGPA 8.02</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" class="contact" data-formation="singularity" data-dim="0" data-shift="0.25" tabindex="-1" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title" data-reveal="lines">Contact</h2>
+        <p class="contact__lede">Email is the quickest way to reach me. I'm based in Kochi, Kerala.</p>
+        <p class="contact__address">chris.saji001@gmail.com</p>
+        <div class="contact__actions">
+          <a class="button button--primary" href="mailto:chris.saji001@gmail.com">Email me</a>
+          <a class="button" href="./Chris_Thomas_Saji_Resume.pdf" download>Download resume</a>
+          <a class="button" href="https://www.linkedin.com/in/chris-thomas-saji" rel="noopener">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Chris Thomas Saji. Built with three.js, GSAP and Claude Code.</p>
+    </footer>
+  </body>
+</html>

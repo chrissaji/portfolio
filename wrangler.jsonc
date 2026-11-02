@@ -1,0 +1,15 @@
+// Cloudflare Worker serving dist/ as static assets, with no Worker script (the streamforge-site pattern).
+// Before the first deploy: install wrangler pinned, set compatibility_date no newer than its bundled workerd,
+// add the custom-domain route Chris chooses, build with SITE_URL set, and run npm run check.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "chris-portfolio",
+  "compatibility_date": "2026-10-20",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "workers_dev": false,
+  "preview_urls": false
+}
